@@ -1,65 +1,271 @@
-import Image from "next/image";
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import Link from 'next/link'
+import Image from 'next/image' 
 
-export default function Home() {
+export default function Homepage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <>
+      <Header />
+
+      {/* ================= HERO SECTION ================= */}
+      <section className="relative w-full h-[65vh] min-h-[600px] overflow-hidden">
+        {/* Background Image */}
+        <img
+          src="/img1.jpg"
+          alt="Medical Team"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/30" />
+
+        {/* Hero Text */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex items-center">
+          <div className="text-white max-w-xl">
+           <h1 className="text-2xl sm:text-3xl md:text-[4px] font-bold leading-tight mb-4">
+            Where Compassion and <span className="hidden md:inline"><br /></span>
+            Healing Come Together
+            </h1>
+
+
+            <p className="text-lg text-gray-200">
+              Dedicated to providing multidisciplinary medical care and backed
+              by state-of-the-art facilities.
+            </p>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+      </section>
+
+      {/* ================= BUTTON ACTION BAR ================= */}
+      <section className="relative z-20 -mt-24">
+        <div className="flex justify-center">
+          <div className="w-[80%] grid grid-cols-1 md:grid-cols-3 text-white shadow-lg">
+            
+            {/* Emergency */}
+            <div className="bg-[#4bb3d3] px-10 py-10">
+              <div className="flex items-center gap-4 mb-6">
+                <span className="text-4xl">📞</span>
+                <h3 className="text-xl font-semibold tracking-wide">
+                  EMERGENCY CONTACT
+                </h3>
+              </div>
+              <p className="text-3xl font-bold tracking-wider">
+                1-800-400-7400
+              </p>
+            </div>
+
+            {/* Appointment */}
+            <div className="bg-[#2ea0c9] px-10 py-10">
+              <div className="flex items-center gap-4 mb-6">
+                <span className="text-4xl">📅</span>
+                <h3 className="text-xl font-semibold tracking-wide">
+                  DOCTOR APPOINTMENT
+                </h3>
+              </div>
+
+              <button className="mt-4 bg-white text-[#2ea0c9] px-6 py-3 font-semibold rounded hover:bg-gray-100 transition">
+                BOOK AN APPOINTMENT
+              </button>
+            </div>
+
+            {/* Opening Hours */}
+            <div className="bg-[#0286b8] px-10 py-10">
+              <div className="flex items-center gap-4 mb-6">
+                <span className="text-4xl">⏰</span>
+                <h3 className="text-xl font-semibold tracking-wide">
+                  OPENING HOURS
+                </h3>
+              </div>
+
+              <ul className="space-y-3 text-sm">
+                <li className="flex justify-between border-b border-white/30 pb-2">
+                  <span>Monday - Friday</span>
+                  <span className="font-semibold">10.00 - 21.00</span>
+                </li>
+                <li className="flex justify-between border-b border-white/30 pb-2">
+                  <span>Saturday</span>
+                  <span className="font-semibold">10.00 - 18.00</span>
+                </li>   
+                <li className="flex justify-between">
+                  <span>Sunday</span>
+                  <span className="font-semibold">11.00 - 17.00</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ================= WELCOME SECTION ================= */}
+      <section className="bg-white pt-32 pb-20">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          
+          {/* Left Image */}
+          <div className="flex justify-center lg:justify-start">
+            <img
+              src="/img5.png"
+              alt="Medical Team"
+              className="max-w-full h-auto"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
+
+          {/* Right Content */}
+          <div>
+            <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 mb-6">
+              Welcome To Bayanno Diagnostic Center
+            </h2>
+
+            <p className="text-gray-600 leading-relaxed text-base">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam, quis nostrud exercitation ullamco laboris.
+            </p>
+          </div>
         </div>
-      </main>
-    </div>
-  );
+      </section>
+
+      {/* Top Blue Header */}
+      <div className="relative bg-[#0286b8] text-white text-center py-20 px-6">
+        <h2 className="text-3xl md:text-4xl font-semibold mb-6">
+          Our World Class Services
+        </h2>
+
+        <p className="max-w-2xl mx-auto text-base md:text-lg text-white/90">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna. Ut enim ad minim veniam.
+        </p>
+
+        {/* Down Arrow */}
+        <div className="absolute left-1/2 -bottom-6 transform -translate-x-1/2">
+          <div className="w-0 h-0 border-l-[30px] border-r-[30px] border-t-[30px] border-l-transparent border-r-transparent border-t-[#0286b8]" />
+        </div>
+      </div>
+
+      {/* Services Content */}
+      <div className="bg-white py-24">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-16">
+
+          {/* Service Item */}
+          <div className="flex gap-6">
+            <div className="text-[#0286b8] text-4xl">🩺</div>
+            <div>
+              <h3 className="text-lg font-semibold mb-2">
+                High quality service
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex gap-6">
+            <div className="text-[#0286b8] text-4xl">🏥</div>
+            <div>
+              <h3 className="text-lg font-semibold mb-2">
+                Modern hospital and technology
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex gap-6">
+            <div className="text-[#0286b8] text-4xl">🚑</div>
+            <div>
+              <h3 className="text-lg font-semibold mb-2">
+                Ready for intervention
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex gap-6">
+            <div className="text-[#0286b8] text-4xl">👨‍⚕️</div>
+            <div>
+              <h3 className="text-lg font-semibold mb-2">
+                Specialist consulting for health problems
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <section className="bg-gray-50 py-20">
+      <div className="max-w-7xl mx-auto px-6">
+
+        {/* Title */}
+        <h2 className="text-center text-2xl font-medium text-gray-800 mb-16">
+          Departments
+        </h2>
+
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+          
+          {/* Card 1 */}
+          <div className="bg-white rounded-lg shadow-sm p-10 flex flex-col items-center justify-center text-center">
+            <Image
+              src="/anesthetics.png"
+              alt="Anesthetics"
+              width={60}
+              height={60}
+            />
+            <p className="mt-4 text-gray-600 text-lg">Anesthetics</p>
+          </div>
+
+          {/* Card 2 */}
+          <div className="bg-white rounded-lg shadow-sm p-10 flex flex-col items-center justify-center text-center">
+            <Image
+              src="/cardiology.png"
+              alt="Cardiology"
+              width={60}
+              height={60}
+            />
+            <p className="mt-4 text-gray-600 text-lg">Cardiology</p>
+          </div>
+
+          {/* Card 3 */}
+          <div className="bg-white rounded-lg shadow-sm p-10 flex flex-col items-center justify-center text-center">
+             <Image
+              src="/gastroenterology.png"
+              alt="Gastroenterology"
+              width={60}
+              height={60}
+            />
+            <p className="text-gray-600 text-lg">Gastroenterology</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  
+    
+     <section className="bg-white py-20 text-center">
+      <h2 className="text-2xl md:text-3xl font-medium text-gray-900 mb-8">
+        Get In Touch With Our Professionals
+      </h2>
+    
+      <Link href={"/appointment"} className="bg-[#0286b8] text-white px-10 py-4 uppercase tracking-wide font-semibold hover:bg-[#026f99] transition">
+    
+          Make An Appointment  
+      </Link>
+ 
+    </section>
+
+      <Footer />
+    </>
+  )
 }
+ 
