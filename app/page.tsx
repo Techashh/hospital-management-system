@@ -23,10 +23,10 @@ export default function Homepage() {
         {/* Hero Text */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex items-center">
           <div className="text-white max-w-xl">
-           <h1 className="text-2xl sm:text-3xl md:text-[4px] font-bold leading-tight mb-4">
-            Where Compassion and <span className="hidden md:inline"><br /></span>
-            Healing Come Together
-            </h1>
+        <h1 className="text-2xl md:text-5xl lg:text-4xl font-bold leading-tight mb-4">
+  Where Compassion and <span className="hidden md:inline"><br /></span>
+  Healing Come Together
+</h1>
 
 
             <p className="text-lg text-gray-200">
@@ -50,7 +50,8 @@ export default function Homepage() {
                   EMERGENCY CONTACT
                 </h3>
               </div>
-              <p className="text-3xl font-bold tracking-wider">
+            <p className="text-xl md:text-3xl font-bold tracking-wider">
+
                 1-800-400-7400
               </p>
             </div>

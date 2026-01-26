@@ -66,6 +66,92 @@ export default function AboutPage() {
       </div>
     </section>
 
+    {/* Top Blue Header */}
+      <div className="relative bg-[#0286b8] text-white text-center py-20 px-6">
+        <h2 className="text-3xl md:text-4xl font-semibold mb-6">
+          Our World Class Services
+        </h2>
+
+        <p className="max-w-2xl mx-auto text-base md:text-lg text-white/90">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna. Ut enim ad minim veniam.
+        </p>
+
+        {/* Down Arrow */}
+        <div className="absolute left-1/2 -bottom-6 transform -translate-x-1/2">
+          <div className="w-0 h-0 border-l-[30px] border-r-[30px] border-t-[30px] border-l-transparent border-r-transparent border-t-[#0286b8]" />
+        </div>
+      </div>
+
+
+       {/* Services Content */}
+      <div className="bg-white py-24">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-16">
+
+      {/* Service Item */}
+          <div className="flex gap-6">
+            <div className="text-[#0286b8] text-4xl">🩺</div>
+            <div>
+              <h3 className="text-lg font-semibold mb-2">
+                High quality service
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex gap-6">
+            <div className="text-[#0286b8] text-4xl">🏥</div>
+            <div>
+              <h3 className="text-lg font-semibold mb-2">
+                Modern hospital and technology
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex gap-6">
+            <div className="text-[#0286b8] text-4xl">🚑</div>
+            <div>
+              <h3 className="text-lg font-semibold mb-2">
+                Ready for intervention
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex gap-6">
+            <div className="text-[#0286b8] text-4xl">👨‍⚕️</div>
+            <div>
+              <h3 className="text-lg font-semibold mb-2">
+                Specialist consulting for health problems
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+           <section className="bg-white py-20 text-center">
+            <Link href={"/appointment"} className="bg-[#0286b8] text-white px-10 py-4 uppercase tracking-wide font-semibold hover:bg-[#026f99] transition">
+          
+                Make An Appointment  
+            </Link>
+       
+          </section>
+
     
     
     <Footer/>

@@ -4,22 +4,34 @@ import { useState } from "react"
 
 const navigationLinks = [
   { name: "HOME", href: "/" },
-  { name: "DEPARTMENTS", href: "/departments" },
+
+  {
+    name: "DEPARTMENTS",
+    href: "/departments",
+    children: [
+      { name: "Cardiology", href: "/departments/cardiology" },
+      { name: "Neurology", href: "/departments/neurology" },
+      { name: "Orthopedics", href: "/departments/orthopedics" },
+    ],
+  },
+
   { name: "DOCTORS", href: "/doctors" },
   { name: "ABOUT", href: "/about" },
   { name: "APPOINTMENT", href: "/appointment" },
   { name: "BLOG", href: "/blog" },
   { name: "CONTACT", href: "/contact" },
   { name: "LOGIN", href: "/login" },
-]
+];
+
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isDeptOpen, setIsDeptOpen] = useState(false);
+   const [open, setOpen] = useState(null);
 
   return (
     <header className="bg-white text-slate-700 shadow-sm sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
 
         {/* Logo */}
         <div className="flex items-center gap-3 text-lg font-medium text-slate-800">
@@ -32,27 +44,45 @@ export default function Header() {
         </div>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex">
-          <ul className="flex items-center gap-8 text-sm font-medium tracking-wide">
-            {navigationLinks.map((link) => (
-              <li key={link.name}>
-                <Link
-                  href={link.href}
-                  className="text-slate-700 hover:text-blue-600 transition-colors duration-200"
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <nav className="hidden md:flex items-center gap-8">
+      {navigationLinks.map((link, index) => (
+        <div
+          key={link.name}
+          className="relative"
+          onMouseEnter={() => setOpen(index)}
+          onMouseLeave={() => setOpen(null)}
+        >
+          <Link
+            href={link.href}
+            className="font-medium text-gray-800 hover:text-blue-600"
+          >
+            {link.name}
+          </Link>
 
+          {/* DROPDOWN */}
+          {link.children && open === index && (
+            <div className="absolute top-full left-0 mt-2 w-52 bg-white shadow-lg rounded-md overflow-hidden">
+              {link.children.map((child) => (
+                <Link
+                  key={child.name}
+                  href={child.href}
+                  className="block px-4 py-2 text-sm hover:bg-gray-100"
+                >
+                  {child.name}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+    </nav>
+ 
        {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="md:hidden text-2xl"
         >
-          ☰
+          
         </button>
       </div>
 
