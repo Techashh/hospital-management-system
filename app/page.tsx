@@ -115,13 +115,14 @@ export default function Homepage() {
           {/* Right Content */}
           <div>
             <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 mb-6">
-              Welcome To Bayanno Diagnostic Center
+              Welcome To Ash Diagnostic Center
             </h2>
 
             <p className="text-gray-600 leading-relaxed text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-              ad minim veniam, quis nostrud exercitation ullamco laboris.
+                At Ash Diagnostic Center, we are committed to delivering accurate,
+              reliable, and timely diagnostic services using advanced medical technology.
+              Our experienced professionals work with care and precision to support early
+              detection, effective treatment, and better health outcomes for every patient.
             </p>
           </div>
         </div>
@@ -134,8 +135,8 @@ export default function Homepage() {
         </h2>
 
         <p className="max-w-2xl mx-auto text-base md:text-lg text-white/90">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna. Ut enim ad minim veniam.
+            We provide advanced diagnostic and healthcare services with precision,
+            compassion, and modern technology for accurate results and quality care.
         </p>
 
         {/* Down Arrow */}
@@ -156,8 +157,8 @@ export default function Homepage() {
                 High quality service
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  We provide reliable diagnostic services with a strong focus on accuracy,
+                  professionalism, and patient-centered care.
               </p>
             </div>
           </div>
@@ -169,8 +170,8 @@ export default function Homepage() {
                 Modern hospital and technology
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Our facility uses modern medical technology to deliver precise results
+               efficiently and safely.
               </p>
             </div>
           </div>
@@ -182,8 +183,8 @@ export default function Homepage() {
                 Ready for intervention
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                     We are prepared to support urgent diagnostic needs with timely and
+                   dependable service.
               </p>
             </div>
           </div>
@@ -195,8 +196,8 @@ export default function Homepage() {
                 Specialist consulting for health problems
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Our specialists offer professional guidance to support accurate diagnosis
+                and informed healthcare decisions.
               </p>
             </div>
           </div>

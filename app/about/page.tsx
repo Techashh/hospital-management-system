@@ -39,29 +39,27 @@ export default function AboutPage() {
       <div className="max-w-4xl mx-auto px-6 text-center">
         {/* Title */}
         <h2 className="text-xl md:text-2xl font-semibold tracking-wide mb-6">
-          ABOUT BAYANNO DIAGNOSTIC CENTER
+          ABOUT ASH DIAGNOSTIC CENTER
         </h2>
 
         {/* First Paragraph */}
         <p className="text-slate-500 leading-relaxed mb-12">
-          Viam sumi mo id erit objectioni mo de necessario crediderim imo
-          terra vox alios aut lor quasi. Vim quaero aut videri pendam plures
-          duo extat neque arcte re ad etiam ego infiniti reperero mutuatur
-          formalem. Viam sumi mo id erit objectioni mo de necessario crediderim
-          imo terra vox alios aut lor quasi. Vim quaero aut videri pendam plures
-          duo extat neque arcte re ad etiam ego infiniti reperero mutuatur
-          formalem.
+            Ash Diagnostic Center is a trusted healthcare facility dedicated to delivering
+  accurate, reliable, and timely diagnostic services. Our team of experienced
+  professionals uses modern medical technology to provide precise results, ensuring
+  patients receive the highest standard of care. We prioritize comfort, safety, and
+  clear communication, making every visit a seamless experience while empowering
+  patients with the information they need to make informed health decisions.
         </p>
 
         {/* Second Paragraph */}
         <p className="text-slate-500 leading-relaxed">
-          Viam sumi mo id erit objectioni mo de necessario crediderim imo
-          terra vox alios aut lor quasi. Vim quaero aut videri pendam plures
-          duo extat neque arcte re ad etiam ego infiniti reperero mutuatur
-          formalem. Viam sumi mo id erit objectioni mo de necessario crediderim
-          imo terra vox alios aut lor quasi. Vim quaero aut videri pendam plures
-          duo extat neque arcte re ad etiam ego infiniti reperero mutuatur
-          formalem.
+         At Ash Diagnostic Center, we are committed to supporting both individuals and
+  healthcare providers with comprehensive diagnostic solutions. From routine screenings
+  to specialized tests, our facility combines expertise, state-of-the-art equipment,
+  and compassionate care to deliver dependable results. By focusing on quality, integrity,
+  and patient-centered service, we strive to build lasting trust and contribute to
+  better health outcomes for everyone we serve.
         </p>
       </div>
     </section>
@@ -73,8 +71,8 @@ export default function AboutPage() {
         </h2>
 
         <p className="max-w-2xl mx-auto text-base md:text-lg text-white/90">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna. Ut enim ad minim veniam.
+         We provide advanced diagnostic and healthcare services with precision,
+compassion, and modern technology for accurate results and quality care.
         </p>
 
         {/* Down Arrow */}
@@ -96,8 +94,9 @@ export default function AboutPage() {
                 High quality service
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                We provide reliable diagnostic services with a strong focus on accuracy,
+      professionalism, and patient-centered care.
+
               </p>
             </div>
           </div>
@@ -109,8 +108,8 @@ export default function AboutPage() {
                 Modern hospital and technology
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                 Our facility uses modern medical technology to deliver precise results
+      efficiently and safely.
               </p>
             </div>
           </div>
@@ -122,8 +121,8 @@ export default function AboutPage() {
                 Ready for intervention
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            We are prepared to support urgent diagnostic needs with timely and
+      dependable service.
               </p>
             </div>
           </div>
@@ -135,8 +134,8 @@ export default function AboutPage() {
                 Specialist consulting for health problems
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Our specialists offer professional guidance to support accurate diagnosis
+      and informed healthcare decisions.
               </p>
             </div>
           </div>

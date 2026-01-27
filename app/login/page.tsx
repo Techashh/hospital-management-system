@@ -19,7 +19,7 @@ import Image from 'next/image'
           />
             </div>
             <h1 className="text-2xl font-semibold text-center">
-              Bayanno Hospital<br />Management System
+              Ash Hospital<br />Management System
             </h1>
           </div>
 
