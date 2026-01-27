@@ -60,12 +60,20 @@ export default function DoctorsPage() {
       </div>
     </section>
 
-      <div className="flex gap-100 w-full h-40 bg-blue-500 py-18 px-30">
-     <p className='text-lg text-white'> Get In Touch With Our Specilaists</p>
-        <Link href={"/appointment"} className="bg-white text-blue-600 px-10 py-4 uppercase tracking-wide font-semibold hover:bg-[#026f99] transition">
-    BOOK APPOINTMENT  
-      </Link>
-     </div>
+<div className="w-full bg-blue-500 px-6 py-8 md:px-20 md:py-12">
+  <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+    <p className="text-white text-lg md:text-xl font-semibold text-center md:text-left">
+      Get In Touch With Our Specialists
+    </p>
+
+    <Link
+      href="/appointment"
+      className="bg-white text-blue-600 px-8 py-3 md:px-10 md:py-4 uppercase tracking-wide font-semibold hover:bg-[#026f99] hover:text-white transition rounded"
+    >
+      Book Appointment
+    </Link>
+  </div>
+</div>
 
     
     <Footer/>
