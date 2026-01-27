@@ -1,10 +1,10 @@
-"use client"
-import Link from "next/link"
-import { useState } from "react"
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
 
 const navigationLinks = [
   { name: "HOME", href: "/" },
-
   {
     name: "DEPARTMENTS",
     href: "/departments",
@@ -14,7 +14,6 @@ const navigationLinks = [
       { name: "Orthopedics", href: "/departments/orthopedics" },
     ],
   },
-
   { name: "DOCTORS", href: "/doctors" },
   { name: "ABOUT", href: "/about" },
   { name: "APPOINTMENT", href: "/appointment" },
@@ -23,16 +22,17 @@ const navigationLinks = [
   { name: "LOGIN", href: "/login" },
 ];
 
-
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDeptOpen, setIsDeptOpen] = useState(false);
-   const [open, setOpen] = useState(null);
+  const [open, setOpen] = useState(null);
+
+  const departmentLinks =
+    navigationLinks.find((l) => l.name === "DEPARTMENTS")?.children || [];
 
   return (
     <header className="bg-white text-slate-700 shadow-sm sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-
         {/* Logo */}
         <div className="flex items-center gap-3 text-lg font-medium text-slate-800">
           <img
@@ -43,46 +43,46 @@ export default function Header() {
           <span>Ash Diagnostics Center</span>
         </div>
 
-        {/* Desktop Menu */}
+        {/* ================= DESKTOP MENU ================= */}
         <nav className="hidden md:flex items-center gap-8">
-      {navigationLinks.map((link, index) => (
-        <div
-          key={link.name}
-          className="relative"
-          onMouseEnter={() => setOpen(index)}
-          onMouseLeave={() => setOpen(null)}
-        >
-          <Link
-            href={link.href}
-            className="font-medium text-gray-800 hover:text-blue-600"
-          >
-            {link.name}
-          </Link>
+          {navigationLinks.map((link, index) => (
+            <div
+              key={link.name}
+              className="relative"
+              onMouseEnter={() => setOpen(index)}
+              onMouseLeave={() => setOpen(null)}
+            >
+              <Link
+                href={link.href}
+                className="font-medium hover:text-blue-600"
+              >
+                {link.name}
+              </Link>
 
-          {/* DROPDOWN */}
-          {link.children && open === index && (
-            <div className="absolute top-full left-0 mt-2 w-52 bg-white shadow-lg rounded-md overflow-hidden">
-              {link.children.map((child) => (
-                <Link
-                  key={child.name}
-                  href={child.href}
-                  className="block px-4 py-2 text-sm hover:bg-gray-100"
-                >
-                  {child.name}
-                </Link>
-              ))}
+              {/* Desktop Dropdown */}
+              {link.children && open === index && (
+                <div className="absolute top-full left-0 mt-2 w-52 bg-white shadow-lg rounded-md overflow-hidden z-50">
+                  {link.children.map((child) => (
+                    <Link
+                      key={child.name}
+                      href={child.href}
+                      className="block px-4 py-2 text-sm hover:bg-gray-100"
+                    >
+                      {child.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
-          )}
-        </div>
-      ))}
-    </nav>
- 
-       {/* Mobile Menu Button */}
+          ))}
+        </nav>
+
+        {/* ================= MOBILE BUTTON ================= */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="md:hidden text-2xl"
         >
-          
+          {isMenuOpen ? "✕" : "☰"}
         </button>
       </div>
 
@@ -90,23 +90,26 @@ export default function Header() {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t shadow-sm">
           <ul className="flex flex-col text-sm font-medium">
-
-            {/* Home */}
+            {/* HOME */}
             <li>
-              <Link href="/" className="block px-6 py-3 hover:bg-gray-50">
+              <Link
+                href="/"
+                className="block px-6 py-3 hover:bg-gray-50"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 HOME
               </Link>
             </li>
 
-            {/* Departments Dropdown */}
+            {/* DEPARTMENTS */}
             <li>
               <button
-  onClick={() => setIsDeptOpen(!isDeptOpen)}
-  className="w-full flex justify-between items-center px-6 py-3 hover:bg-gray-50"
->
-  <span>DEPARTMENTS</span>
-  <span>{isDeptOpen ? "-" : "+"}</span>
-</button>
+                onClick={() => setIsDeptOpen(!isDeptOpen)}
+                className="w-full flex justify-between items-center px-6 py-3 hover:bg-gray-50"
+              >
+                <span>DEPARTMENTS</span>
+                <span>{isDeptOpen ? "−" : "+"}</span>
+              </button>
 
               {isDeptOpen && (
                 <ul className="bg-gray-50">
@@ -125,9 +128,12 @@ export default function Header() {
               )}
             </li>
 
-            {/* Other Links */}
+            {/* OTHER LINKS */}
             {navigationLinks
-              .filter((l) => l.name !== "HOME" && l.name !== "DEPARTMENTS")
+              .filter(
+                (link) =>
+                  link.name !== "HOME" && link.name !== "DEPARTMENTS"
+              )
               .map((link) => (
                 <li key={link.name}>
                   <Link
@@ -142,7 +148,6 @@ export default function Header() {
           </ul>
         </div>
       )}
-        
     </header>
-  )
+  );
 }
