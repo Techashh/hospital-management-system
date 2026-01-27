@@ -7,7 +7,7 @@ const navigationLinks = [
   { name: "HOME", href: "/" },
   {
     name: "DEPARTMENTS",
-    href: "/departments",
+    href: "/",
     children: [
       { name: "Cardiology", href: "/departments/cardiology" },
       { name: "Neurology", href: "/departments/neurology" },
