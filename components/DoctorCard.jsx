@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function DoctorCard({ name }) {
   return (
     <div className="group text-center px-2">
-      <Link href="/doctorprofile" className="block relative">
+      <Link href="/doctorprofile" className="block">
         {/* Image */}
         <div className="relative overflow-hidden rounded-full 
                         w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 
@@ -18,8 +18,7 @@ export default function DoctorCard({ name }) {
           <div
             className="absolute inset-0 bg-blue-600/80 
                        flex items-center justify-center
-                       opacity-0 group-hover:opacity-100 
-                       group-focus:opacity-100
+                       opacity-0 group-hover:opacity-100
                        transition-opacity duration-300"
           >
             <span className="bg-white text-blue-600 px-5 py-2 text-xs sm:text-sm font-semibold rounded">
