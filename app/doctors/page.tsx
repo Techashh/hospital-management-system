@@ -6,11 +6,11 @@ import DepartmentFilter from "@/components/DepartmentFilter";
 import DoctorCard from "@/components/DoctorCard";
 export default function DoctorsPage() {
     const doctors = [
-    "???? ???? ???",
-    "Erich Mcbride",
-    "test",
-    "John Doe",
-    "Jane Smith",
+    "Dr Francisca Wiza",
+    "Dr Erich Mcbride",
+    "Dr Sophia Johnson",
+    "Dr John Doe",
+    "Dr Jane Smith",
   ];
   return (
 
