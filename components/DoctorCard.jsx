@@ -1,8 +1,10 @@
-
+import Link from "next/link";
 
 export default function DoctorCard({ name }) {
   return (
+      
     <div className="group text-center">
+      <Link href={"/doctorprofile"} className="group block text-center">
       {/* Image */}
       <div className="relative overflow-hidden rounded-full w-48 h-48 mx-auto">
         <img
@@ -13,9 +15,9 @@ export default function DoctorCard({ name }) {
 
         {/* Hover Overlay */}
         <div className="absolute inset-0 bg-blue-600/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-          <button className="bg-white text-blue-600 px-6 py-2 text-sm font-medium rounded">
+         <Link href={"/doctorprofile"} className="bg-white text-blue-600 px-6 py-2 text-sm font-medium rounded">
             PROFILE
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -23,6 +25,7 @@ export default function DoctorCard({ name }) {
       <h3 className="mt-4 text-lg font-medium text-gray-800">
         {name}
       </h3>
+      </Link>
 
       <div className="w-12 h-[1px] bg-gray-300 mx-auto my-3" />
 

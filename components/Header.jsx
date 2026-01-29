@@ -9,9 +9,9 @@ const navigationLinks = [
     name: "DEPARTMENTS",
     href: "/",
     children: [
+      { name: "Anesthetics", href: "/departments/anesthetics" },
       { name: "Cardiology", href: "/departments/cardiology" },
-      { name: "Neurology", href: "/departments/neurology" },
-      { name: "Orthopedics", href: "/departments/orthopedics" },
+      { name: "Gastroenterology", href: "/departments/gastroenterology" },
     ],
   },
   { name: "DOCTORS", href: "/doctors" },
